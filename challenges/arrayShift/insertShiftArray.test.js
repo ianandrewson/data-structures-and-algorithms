@@ -6,5 +6,6 @@ describe('insert shift array', () => {
         expect(insertShiftArray([5, 7,], 6)).toEqual([5, 6, 7]);
         expect(insertShiftArray([], 4)).toEqual([4]);
         expect(insertShiftArray([100, 1000, 10000, 100000], 5000)).toEqual([100, 1000, 5000, 10000, 100000]);
+        expect(insertShiftArray([100, 400, 500], 450)).toEqual([100, 400, 450, 500]);
     });
 });
