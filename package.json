@@ -1,0 +1,26 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "Table of Contents:\r -   array-reverse",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "eslint": "^6.1.0"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianandrewson/data-structures-and-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianandrewson/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/ianandrewson/data-structures-and-algorithms#readme"
+}
