@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575565960921" clover="3.2.0">
-  <project timestamp="1575565960921" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
-    <file name="array-binary-search.js" path="C:\Users\user\alchemy\bootcamp-three\data-structures-and-algorithms\challenges\array-binary-search\array-binary-search.js">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="3" type="stmt"/>
-      <line num="3" count="9" type="cond" truecount="2" falsecount="0"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
+<coverage generated="1575868079487" clover="3.2.0">
+  <project timestamp="1575868079487" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4" elements="19" coveredelements="19" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="linked-list.js" path="C:\Users\user\alchemy\bootcamp-three\data-structures-and-algorithms\challenges\linkedList\linked-list.js">
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="3" count="7" type="stmt"/>
+      <line num="4" count="7" type="stmt"/>
+      <line num="8" count="14" type="stmt"/>
+      <line num="9" count="14" type="stmt"/>
+      <line num="10" count="14" type="stmt"/>
+      <line num="14" count="5" type="stmt"/>
+      <line num="15" count="5" type="stmt"/>
+      <line num="16" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="27" count="14" type="stmt"/>
+      <line num="28" count="14" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

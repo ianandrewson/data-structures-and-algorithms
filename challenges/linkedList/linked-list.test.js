@@ -1,17 +1,16 @@
-const { LinkedList, Node } = require('./linked-list');
+const { LinkedList } = require('./linked-list');
 
 describe('Linked-List tests', () => {
   it('Can successfully instantiate an empty linked list', () => {
     const list = new LinkedList();
     expect(list.head).toBeNull();
-    expect(list.constructor).toHaveBeenCalled();
     expect(list.current).toBeNull();
   });
   it('Can properly insert into the linked list', () => {
     const list = new LinkedList();
-    const node = list.insert();
-    expect(node.constructor).toHaveBeenCalled();
+    list.insert(1);
     expect(list.head).toBeDefined();
+    expect(list.current).toEqual(list.head);
   });
   it('The head property will properly point to the first node in the list', () => {
     const list = new LinkedList();
@@ -19,8 +18,7 @@ describe('Linked-List tests', () => {
     list.insert(2);
     list.insert(1);
     expect(list.head).toBeDefined();
-    expect(list.insert).toHaveBeenCalledTimes(3);
-    expect(list.head.node.value).toEqual(1);
+    expect(list.head.value).toEqual(1);
 
   });  
   it('Can properly insert multiple nodes into the linked list', () => {
@@ -28,16 +26,15 @@ describe('Linked-List tests', () => {
     list.insert(3);
     list.insert(2);
     list.insert(1);
-    expect(list.insert).toHaveBeenCalledTimes(3);
-    expect(list.nodes.keys().length).toEqual(3);
-    while(current) {
-      expect(current.next).toBeDefined();
-    }
+    expect(list.current.next).toBeDefined();
+    expect(list.current.value).toEqual(1);
+    expect(list.current.next.value).toEqual(2);
   });
   it('Will return true when finding a value within the linked list that exists', () => {
     const list = new LinkedList();
     list.insert('truck');
     list.insert('apple');
+    console.log(list);
     expect(list.includes('truck')).toBeTruthy();
     expect(list.includes('apple')).toBeTruthy();
   });
