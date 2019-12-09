@@ -21,6 +21,42 @@ class LinkedList {
     }
   }
 
+  append(val){
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.next === null) {
+        this.current.next = new Node(val, null);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
+  insertBefore(val, newValue){
+    if(!this.includes(val)){
+      throw new Error('Value to insert before was not found.');
+    }
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.next.value === val){
+        this.current.next = new Node(newValue, this.current.next);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
+  insertAfter(val, newValue){
+    if(!this.includes(val)){
+      throw new Error('Value to insert after was not found.');
+    }
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.value === val){
+        this.current.next = new Node(newValue, this.current.next);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
   toString() {
     this.current = this.head;
     let result = '';
@@ -30,6 +66,8 @@ class LinkedList {
     }
     return result.trimRight();
   }
+
+
 }
 
 class Node {
