@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575869435806" clover="3.2.0">
-  <project timestamp="1575869435806" name="All files">
+<coverage generated="1575870928006" clover="3.2.0">
+  <project timestamp="1575870928006" name="All files">
     <metrics statements="44" coveredstatements="44" conditionals="12" coveredconditionals="11" methods="8" coveredmethods="8" elements="64" coveredelements="63" complexity="0" loc="44" ncloc="44" packages="4" files="4" classes="4"/>
     <package name="array-binary-search">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -59,12 +59,12 @@
         <line num="16" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="17" count="3" type="stmt"/>
         <line num="19" count="6" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
         <line num="37" count="14" type="stmt"/>
         <line num="38" count="14" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
