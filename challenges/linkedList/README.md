@@ -27,7 +27,17 @@ Insert: O(1).
 Includes: O(n).
 toString: O(n).
 
+## API
 
-## Solution
-![Whiteboard Solution]('../../assets/CC2_WB.jpg')
+const list = new LinkedList(); // instantiates an empty linked list
 
+list.insert('apple') //inserts a new Node with value: apple into 
+list. Node is inserted at the beginning of the list.
+
+list.insert('orange') inserts a new Node with value: orange into the list. Since the node is inserted at the beginning of the list, the node with value: orange will have a property "next" that points to the next Node in the list. In this case, next will be a Node with value apple.
+
+list.includes('apple'); //returns true
+
+list.includes('pear') //returns false
+
+list.toString(); // returns "orange apple"
