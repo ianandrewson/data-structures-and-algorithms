@@ -21,6 +21,16 @@ class LinkedList {
     }
   }
 
+  append(val){
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.next === null) {
+        this.current.next = new Node(val, null);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
   toString() {
     this.current = this.head;
     let result = '';
@@ -30,6 +40,8 @@ class LinkedList {
     }
     return result.trimRight();
   }
+
+
 }
 
 class Node {
