@@ -26,6 +26,7 @@ describe('linked-list-insertions tests', () => {
     expect(list.head.next.value).toEqual(2);
     expect(list.head.next.next.value).toEqual(3);
     expect(list.head.next.next.next.value).toEqual('TEST');
+    expect(() => list.insertBefore(99, 'Not Found')).toThrowError(new Error('Value to insert before was not found.'));
   });
   it('can successfully insert a node before the first node of a linked list', () => {
     const list = new LinkedList();
@@ -43,6 +44,7 @@ describe('linked-list-insertions tests', () => {
     expect(list.head.value).toEqual(1);
     expect(list.head.next.value).toEqual(2);
     expect(list.head.next.next.value).toEqual(3);
+    expect(() => list.insertAfter(99, 'NOPE')).toThrowError(new Error('Value to insert after was not found.'));
   });
   it('can successfully insert after the last node of the linked list', () => {
     const list = new LinkedList();

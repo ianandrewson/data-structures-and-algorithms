@@ -32,6 +32,9 @@ class LinkedList {
   }
 
   insertBefore(val, newValue){
+    if(!this.includes(val)){
+      throw new Error('Value to insert before was not found.');
+    }
     this.current = this.head;
     while(this.current !== null){
       if(this.current.next.value === val){
@@ -42,6 +45,9 @@ class LinkedList {
   }
 
   insertAfter(val, newValue){
+    if(!this.includes(val)){
+      throw new Error('Value to insert after was not found.');
+    }
     this.current = this.head;
     while(this.current !== null){
       if(this.current.value === val){
