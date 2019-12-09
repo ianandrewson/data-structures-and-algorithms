@@ -34,7 +34,6 @@ describe('Linked-List tests', () => {
     const list = new LinkedList();
     list.insert('truck');
     list.insert('apple');
-    console.log(list);
     expect(list.includes('truck')).toBeTruthy();
     expect(list.includes('apple')).toBeTruthy();
   });
@@ -51,6 +50,6 @@ describe('Linked-List tests', () => {
     list.insert(1);
     list.insert(2);
     list.insert(3);
-    expect(list.toString()).toEqual('1, 2, 3');
+    expect(list.toString()).toEqual('3 2 1');
   });
 });

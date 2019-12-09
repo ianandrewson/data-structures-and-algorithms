@@ -23,10 +23,12 @@ class LinkedList {
 
   toString() {
     this.current = this.head;
-    let result;
-    while(this.current){
-      result.concat(this.current.value);
+    let result = '';
+    while(this.current !== null){
+      result += this.current.value + ' ';
+      this.current = this.current.next;
     }
+    return result.trimRight();
   }
 }
 
