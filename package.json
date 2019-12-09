@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ianandrewson/data-structures-and-algorithms/issues"
   },
-  "homepage": "https://github.com/ianandrewson/data-structures-and-algorithms#readme"
+  "homepage": "https://github.com/ianandrewson/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "@types/jest": "^24.0.23"
+  }
 }
