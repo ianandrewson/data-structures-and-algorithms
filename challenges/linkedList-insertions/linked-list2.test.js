@@ -22,8 +22,10 @@ describe('linked-list-insertions tests', () => {
     list.append(3);
     list.append(4);
     list.insertBefore(3, 2);
+    list.insertBefore(4, 'TEST');
     expect(list.head.next.value).toEqual(2);
     expect(list.head.next.next.value).toEqual(3);
+    expect(list.head.next.next.next.value).toEqual('TEST');
   });
   it('can successfully insert a node before the first node of a linked list', () => {
     const list = new LinkedList();
@@ -36,7 +38,7 @@ describe('linked-list-insertions tests', () => {
   it('can successfully insert after a node in the middle of the linked list', () => {
     const list = new LinkedList();
     list.insert(1);
-    list.insert(3);
+    list.append(3);
     list.insertAfter(1, 2);
     expect(list.head.value).toEqual(1);
     expect(list.head.next.value).toEqual(2);

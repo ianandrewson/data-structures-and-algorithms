@@ -31,6 +31,26 @@ class LinkedList {
     }
   }
 
+  insertBefore(val, newValue){
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.next.value === val){
+        this.current.next = new Node(newValue, this.current.next);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
+  insertAfter(val, newValue){
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.value === val){
+        this.current.next = new Node(newValue, this.current.next);
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
   toString() {
     this.current = this.head;
     let result = '';
