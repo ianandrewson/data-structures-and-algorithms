@@ -26,6 +26,7 @@ class DoublyLinkedList {
     while(this.current !== null){
       if(this.current.next === null) {
         this.current.next = new Node(val, null, this.current);
+        this.current = this.head;
         break;
       } else this.current = this.current.next;
     }
@@ -76,6 +77,23 @@ class DoublyLinkedList {
       this.current = this.current.next;
     }
     return result.trimRight();
+  }
+
+  kthFromEnd(num) {
+    if(num < 0){
+      throw new Error('number cannot be negative');
+    }
+    this.current = this.head;
+    if(this.current.next === null && this.current.previous === null) {
+      return this.current.value;
+    }
+    while(this.current.next !== null){
+      this.current = this.current.next;
+    }
+    for(let i = 1; i < num; i++){
+      this.current = this.current.previous;
+    }
+    return this.current.value;
   }
 }
 

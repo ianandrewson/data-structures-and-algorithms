@@ -10,3 +10,5 @@ Table of Contents:
 4. [linked-list](challenges/linkedList/README.md)
 
 5. [linked-list insertions](challenges/linkedList-insertions/README.md)
+
+6. [linked-list kth-from-end](challenges/linked-list-kth-from-end/README.md)
