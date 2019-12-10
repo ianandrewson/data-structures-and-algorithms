@@ -56,4 +56,13 @@ describe('linked-list-insertions tests', () => {
     expect(list.head.next.next.value).toEqual(3);
     expect(list.head.next.next.next).toBeNull();
   });
+  it('can successfully delete a node base on a value', () => {
+    const list = new LinkedList();
+    list.insert(1);
+    list.append(2);
+    list.append(3);
+    list.delete(2);
+    expect(list.head.value).toEqual(1);
+    expect(list.head.next.value).toEqual(3);
+  });
 });
