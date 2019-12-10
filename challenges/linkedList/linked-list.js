@@ -57,6 +57,16 @@ class LinkedList {
     }
   }
 
+  delete(val){
+    this.current = this.head;
+    while(this.current !== null){
+      if(this.current.next.value === val){
+        this.current.next = this.current.next.next;
+        break;
+      } else this.current = this.current.next;
+    }
+  }
+
   toString() {
     this.current = this.head;
     let result = '';
@@ -66,8 +76,6 @@ class LinkedList {
     }
     return result.trimRight();
   }
-
-
 }
 
 class Node {
