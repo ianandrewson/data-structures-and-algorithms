@@ -1,4 +1,4 @@
-const DoublyLinkedList = require('../linkedList/doubly-linked-list');
+const { DoublyLinkedList } = require('../linkedList/doubly-linked-list');
 
 describe('ll kth-from-end tests', () => {
   it('should throw an error if k is greater than the length of the list', () => {
@@ -32,10 +32,10 @@ describe('ll kth-from-end tests', () => {
   it('should return the correct value if k is in the middle of the list', () => {
     const list = new DoublyLinkedList();
     list.insert(1);
-    list.insert(2);
-    list.insert(3);
-    list.insert(4);
-    expect(list.kthFromEnd(2)).toEqual(2);
-    expect(list.kthFromEnd(1)).toEqual(3);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    expect(list.kthFromEnd(2)).toEqual(3);
+    expect(list.kthFromEnd(1)).toEqual(4);
   });
 });
