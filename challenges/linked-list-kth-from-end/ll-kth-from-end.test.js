@@ -38,4 +38,15 @@ describe('ll kth-from-end tests', () => {
     expect(list.kthFromEnd(2)).toEqual(3);
     expect(list.kthFromEnd(1)).toEqual(4);
   });
+  it('should return the value of the middle node in a list', () => {
+    const list = new DoublyLinkedList();
+    list.insert(1);
+    list.append(2);
+    list.append(3);
+    expect(list.middleNode()).toEqual(2);
+    list.append(4);
+    expect(list.middleNode()).toEqual(2);
+    list.append(5);
+    expect(list.middleNode()).toEqual(3);
+  });
 });

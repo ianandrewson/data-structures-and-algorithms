@@ -95,6 +95,20 @@ class DoublyLinkedList {
     }
     return this.current.value;
   }
+
+  middleNode() {
+    this.current = this.head;
+    let length = 0;
+    if(this.current === null) {
+      throw new Error ('list is empty');
+    }
+    while(this.current !== null){
+      length++;
+      this.current = this.current.next;
+    }
+    console.log(length);
+    return this.kthFromEnd(Math.floor(length / 2) + 1);
+  }
 }
 
 class Node {
