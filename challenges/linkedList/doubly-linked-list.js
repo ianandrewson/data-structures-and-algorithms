@@ -23,6 +23,9 @@ class DoublyLinkedList {
 
   append(val){
     this.current = this.head;
+    // if(this.current === null){
+    //   this.current = new Node(val, null, null)
+    // }
     while(this.current !== null){
       if(this.current.next === null) {
         this.current.next = new Node(val, null, this.current);
@@ -108,6 +111,30 @@ class DoublyLinkedList {
     }
     console.log(length);
     return this.kthFromEnd(Math.floor(length / 2) + 1);
+  }
+
+  merge(otherList){
+    // const list1Vals = this.toString().split(' ');
+    // const list2Vals = otherList.toString().split(' ');
+    let count = 2;
+    const result = new DoublyLinkedList();
+    this.current = this.head;
+    otherList.current = otherList.head;
+    result.insert(this.current.value);
+    this.current = this.current.next;
+    while(this.current !== null || otherList.current !== null) {
+      if(count % 2 === 1 && this.current !== null) {
+        result.append(this.current.value);
+        this.current = this.current.next;
+      } else {
+        if(otherList.current !== null){
+          result.append(otherList.current.value);
+          otherList.current = otherList.current.next;
+        }
+      }
+      count++;
+    }
+    return result;
   }
 }
 

@@ -15,7 +15,7 @@ describe('linked list merge tests', () => {
     list2.insert(2);
     const mergedList = list1.merge(list2);
     expect(mergedList.head.value).toEqual(1);
-    expect(mergedList.next.valule).toEqual(2);
+    expect(mergedList.head.next.value).toEqual(2);
   });
   it('should be able to merge two lists of length greater than one', () => {
     const list1 = new DoublyLinkedList();
@@ -26,9 +26,9 @@ describe('linked list merge tests', () => {
     list2.append(4);
     const mergedList = list1.merge(list2);
     expect(mergedList.head.value).toEqual(1);
-    expect(mergedList.next.value).toEqual(2);
-    expect(mergedList.next.next.value).toEqual(3);
-    expect(mergedList.next.next.next.value).toEqual(4);
+    expect(mergedList.head.next.value).toEqual(2);
+    expect(mergedList.head.next.next.value).toEqual(3);
+    expect(mergedList.head.next.next.next.value).toEqual(4);
   });
   it('should be able to merge two lists of dissimilar length', () => {
     const list1 = new DoublyLinkedList();
@@ -38,14 +38,13 @@ describe('linked list merge tests', () => {
     list1.append(3);
     let mergedList = list1.merge(list2);
     expect(mergedList.head.value).toEqual(1);
-    expect(mergedList.next.value).toEqual(2);
-    expect(mergedList.next.next.value).toEqual(3);
-    expect(mergedList.next.next.next.value).toBeNull();
+    expect(mergedList.head.next.value).toEqual(2);
+    expect(mergedList.head.next.next.value).toEqual(3);
     list2.append(4);
     list2.append(6);
     mergedList = list1.merge(list2);
     expect(mergedList.head.next.next.next.value).toEqual(4);
-    expect(mergedList.next.next.next.next.next.value).toEqual(6);
+    expect(mergedList.head.next.next.next.next.value).toEqual(6);
   });
 });
 
