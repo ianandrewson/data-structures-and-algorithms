@@ -109,13 +109,10 @@ class DoublyLinkedList {
       length++;
       this.current = this.current.next;
     }
-    console.log(length);
     return this.kthFromEnd(Math.floor(length / 2) + 1);
   }
 
   merge(otherList){
-    // const list1Vals = this.toString().split(' ');
-    // const list2Vals = otherList.toString().split(' ');
     let count = 2;
     const result = new DoublyLinkedList();
     this.current = this.head;
