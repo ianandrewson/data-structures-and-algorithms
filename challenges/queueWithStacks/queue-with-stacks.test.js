@@ -24,7 +24,7 @@ describe('queue and stack tests', () => {
     expect(stack.pop()).toEqual(3);
     expect(stack.pop()).toEqual(2);
     expect(stack.head.value).toEqual(1);
-    expect(stack.head.next).toeBeUndefined();
+    expect(stack.head.next).toBeNull();
   });
   it('can peek at the first value in the stack', () => {
     const stack = new Stack();

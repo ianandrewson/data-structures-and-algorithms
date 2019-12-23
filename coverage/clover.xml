@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1577068917976" clover="3.2.0">
-  <project timestamp="1577068917976" name="All files">
+<coverage generated="1577069043394" clover="3.2.0">
+  <project timestamp="1577069043394" name="All files">
     <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="14" coveredelements="14" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="queue-with-stacks.js" path="C:\Users\user\alchemy\bootcamp-three\data-structures-and-algorithms\challenges\queueWithStacks\queue-with-stacks.js">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
