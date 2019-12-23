@@ -21,6 +21,10 @@ class Stack {
     this.head = this.head.next;
     return toReturn;
   }
+
+  peek(){
+    if(this.head) {return this.head.value;}
+  }
 }
 
 class Queue {

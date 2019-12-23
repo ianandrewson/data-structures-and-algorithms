@@ -28,6 +28,7 @@ describe('queue and stack tests', () => {
   });
   it('can peek at the first value in the stack', () => {
     const stack = new Stack();
+    expect(stack.peek()).toBeUndefined();
     stack.push(1);
     expect(stack.peek()).toEqual(1);
     stack.push(2);
