@@ -21,3 +21,5 @@ enqueue: O(n) time and space
 dequeue: O(1) time and space
 
 ## Solution
+
+The only tricky method is enqueue. Since a queue is First In First out, but must be implemented via a stack which is First In, Last Out, all values of the queue must be popped onto a shadow stack (thereby reversing the order), pushing the new value onto the now empty queue, and pushing all of the values of the shadow stack back onto the queue (putting back into the proper order, with the new value effectively at the end of the queue).
