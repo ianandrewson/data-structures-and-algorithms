@@ -16,3 +16,5 @@ Table of Contents:
 7. [linked-list merge](challenges/linked-list-merge/README.md)
 
 8. [queue-with-stacks](challenges/queueWithStacks/README.md)
+
+9. [first-in-first-out-animal-shelter](challenges/fifoAnimalShelter/README.md)
