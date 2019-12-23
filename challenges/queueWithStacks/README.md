@@ -17,7 +17,7 @@ Pop: O(1) time and space
 Peek: O(1) time and space
 
 PseudoQueues:
-enqueue: O(1) time and space
+enqueue: O(n) time and space
 dequeue: O(1) time and space
 
 ## Solution

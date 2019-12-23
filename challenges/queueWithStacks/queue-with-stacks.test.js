@@ -38,7 +38,6 @@ describe('queue and stack tests', () => {
   it('can make an empty queue', () => {
     const queue = new Queue();
     expect(queue).toBeDefined();
-    expect(queue.head).toBeNull();
   });
   it('can add a value to the queue', () => {
     const queue = new Queue();
