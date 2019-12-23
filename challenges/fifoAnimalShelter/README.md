@@ -9,8 +9,8 @@ Create a class called AnimalShelter which holds only dogs and cats. The shelter 
 
 Straightforward queue.
 
-enqueue: O(n)
-dequeue: O(1)
+enqueue: O(1)
+dequeue: O(n)
 
 ## Solution
 
