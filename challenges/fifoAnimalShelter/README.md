@@ -13,3 +13,5 @@ enqueue: O(n)
 dequeue: O(1)
 
 ## Solution
+
+Since this challenge placed no restrictions on methods or implementation, I chose to use an array, since it maintains order as items are pushed to it. Then, it becomes a matter of finding the right animal to return, regardless of whether it was pushed to the array before other animals. 
