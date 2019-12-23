@@ -28,7 +28,23 @@ class Stack {
 }
 
 class Queue {
+  constructor(){
+    this.mainStack = new Stack();
+    this.shadowStack = new Stack();
+    this.head = this.mainStack.head;
+  }
 
+  enqueue(val){
+    this.shadowStack = new Stack();
+    while(this.mainStack.head !== null){
+      this.shadowStack.push(this.mainStack.pop());
+    }
+    this.mainStack.push(val);
+    while(this.shadowStack.head !== null){
+      this.mainStack.push(this.shadowStack.pop());
+    }
+    this.head = this.mainStack.head;
+  }
 }
 
 module.exports = {
