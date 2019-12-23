@@ -13,4 +13,6 @@ Table of Contents:
 
 6. [linked-list kth-from-end](challenges/linked-list-kth-from-end/README.md)
 
-7. [linked-list merge](challenges/linked-list-merge.README.md)
+7. [linked-list merge](challenges/linked-list-merge/README.md)
+
+8. [queue-with-stacks](challenges/queueWithStacks/README.md)
