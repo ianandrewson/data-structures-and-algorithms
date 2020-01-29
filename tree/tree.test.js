@@ -15,8 +15,8 @@ describe('tree tests', () => {
   it.only('can add a left and right child to a single root node', () => {
     const tree = new BinaryTree(2);
     tree.add(1);
-    //tree.add(3);
-    //console.log(tree);
+    tree.add(3);
+    // console.log(tree.root.left.value);
     expect(tree.root.left.value).toEqual(1);
     expect(tree.root.right.value).toEqual(3);
   });

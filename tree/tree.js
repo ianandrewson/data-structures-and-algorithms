@@ -11,6 +11,8 @@ class BinaryTree {
     if(typeof root === 'number'){
       //console.log('root is a number');
       this.root = new Node(root);
+      this.left = null;
+      this.right = null;
       
     } else {
       if(!root){
@@ -32,13 +34,21 @@ class BinaryTree {
       throw Error('value already in tree');
     }
     if(num < this.root.value){
+      console.log('here');
       if(this.left !== null) {
+        console.log('left is not null');
         new BinaryTree(this.left).add(num);
-      } else this.left = new Node(num);
+      } else {
+        this.left = new Node(num);
+        this.root.left = this.left;
+      }
     } else {
       if(this.right !== null){
         new BinaryTree(this.right).add(num);
-      } else this.right = new Node(num);
+      } else {
+        this.right = new Node(num);
+        this.root.right = this.right;
+      }
     }
   }
 }
