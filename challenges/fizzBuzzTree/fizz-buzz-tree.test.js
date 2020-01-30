@@ -1,4 +1,4 @@
-const { FBT, Node, Tree} = require('./fizz-buzz-tree.js');
+const { FBT, Node, Tree } = require('./fizz-buzz-tree.js');
 
 describe('fizzbuzz tree tests', () => {
   it('can instantiate a new node', () => {

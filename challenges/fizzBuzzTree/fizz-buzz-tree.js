@@ -1,5 +1,12 @@
-const FizzBuzzTree = () => {
+class Node {
 
+}
+class Tree {
+
+}
+
+const FizzBuzzTree = tree => {
+  
 };
 
-module.exports = FizzBuzzTree;
+module.exports = { FizzBuzzTree, Node, Tree };
