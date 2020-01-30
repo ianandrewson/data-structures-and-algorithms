@@ -1,7 +1,7 @@
 const { FBT, Node, Tree } = require('./fizz-buzz-tree.js');
 
 describe('fizzbuzz tree tests', () => {
-  it('can instantiate a new node', () => {
+  it.only('can instantiate a new node', () => {
     const node = new Node(3);
     expect(node).toBeDefined();
     expect(node.value).toEqual(3);

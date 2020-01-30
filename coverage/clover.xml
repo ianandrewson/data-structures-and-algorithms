@@ -1,37 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1580317154479" clover="3.2.0">
-  <project timestamp="1580317154479" name="All files">
-    <metrics statements="28" coveredstatements="17" conditionals="12" coveredconditionals="6" methods="3" coveredmethods="3" elements="43" coveredelements="26" complexity="0" loc="28" ncloc="28" packages="1" files="1" classes="1"/>
-    <file name="tree.js" path="C:\Users\user\alchemy\bootcamp-three\data-structures-and-algorithms\tree\tree.js">
-      <metrics statements="28" coveredstatements="17" conditionals="12" coveredconditionals="6" methods="3" coveredmethods="3"/>
-      <line num="3" count="3" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="3" type="stmt"/>
-      <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="27" count="0" type="stmt"/>
-      <line num="33" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="34" count="0" type="stmt"/>
-      <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="37" count="1" type="stmt"/>
-      <line num="38" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="39" count="0" type="stmt"/>
-      <line num="40" count="0" type="stmt"/>
-      <line num="42" count="1" type="stmt"/>
-      <line num="43" count="1" type="stmt"/>
-      <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
-      <line num="47" count="0" type="stmt"/>
-      <line num="49" count="1" type="stmt"/>
-      <line num="50" count="1" type="stmt"/>
-      <line num="75" count="1" type="stmt"/>
+<coverage generated="1580346950483" clover="3.2.0">
+  <project timestamp="1580346950483" name="All files">
+    <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="7" coveredelements="6" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
+    <file name="fizz-buzz-tree.js" path="C:\Users\user\alchemy\bootcamp-three\data-structures-and-algorithms\challenges\fizzBuzzTree\fizz-buzz-tree.js">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
