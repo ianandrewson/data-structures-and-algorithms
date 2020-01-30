@@ -7,7 +7,7 @@ describe('fizzbuzz tree tests', () => {
     expect(node.value).toEqual(3);
   });
 
-  it.only('can instantiate a new tree with a single value', () => {
+  it('can instantiate a new tree with a single value', () => {
     const tree = new Tree(3);
     expect(tree).toBeDefined();
     expect(tree.root.value).toEqual(3);
@@ -31,7 +31,7 @@ describe('fizzbuzz tree tests', () => {
     expect(tree.root.left.left.value).toEqual(1);
   });
 
-  it('can make a tree out a list of node values', () => {
+  it.only('can make a tree out a list of node values', () => {
     const tree = new Tree([5, 3, 7, 2, 4, 9]);
     expect(tree).toBeDefined();
   });
