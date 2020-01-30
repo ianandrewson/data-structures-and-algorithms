@@ -34,6 +34,12 @@ describe('fizzbuzz tree tests', () => {
   it.only('can make a tree out a list of node values', () => {
     const tree = new Tree([5, 3, 7, 2, 4, 9]);
     expect(tree).toBeDefined();
+    expect(tree.root.value).toEqual(5);
+    expect(tree.root.left.value).toEqual(3);
+    expect(tree.root.right.value).toEqual(7);
+    expect(tree.root.left.left.value).toEqual(2);
+    expect(tree.root.left.right.value).toEqual(4);
+    expect(tree.root.right.right.value).toEqual(9);
   });
 
   it('can convert a single root node of value 3 to the word "Fizz"', () => {
