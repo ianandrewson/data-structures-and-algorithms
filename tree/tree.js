@@ -8,6 +8,7 @@ class Node {
 
 class BinaryTree {
   constructor(vals){
+    this.result = [];
     if(typeof vals === 'number'){
       this.root = new Node(vals);
     } else if(!vals) {
@@ -40,6 +41,30 @@ class BinaryTree {
         }
       }
     }
+  }
+
+  preOrder(node) {
+    if(node === this.root) this.result = [];
+    this.result.push(node.value);
+    if(node.left) this.preOrder(node.left);
+    if(node.right) this.preOrder(node.right);
+    return this.result;
+  }
+
+  inOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.inOrder(node.left);
+    this.result.push(node.value);
+    if(node.right) this.inOrder(node.right);
+    return this.result;
+  }
+
+  postOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.postOrder(node.left);
+    if(node.right) this.postOrder(node.right);
+    this.result.push(node.value);
+    return this.result;
   }
 }
 

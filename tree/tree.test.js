@@ -28,7 +28,7 @@ describe('tree tests', () => {
     tree.add(100);
     tree.add(55);
     tree.add(103);
-    expect(tree.preorder()).toEqual([7, 2, 1, 100, 55, 103]);
+    expect(tree.preOrder(tree.root)).toEqual([7, 2, 1, 100, 55, 103]);
   });
 
   it('can return a collection from an inorder traversal', () => {
@@ -38,11 +38,11 @@ describe('tree tests', () => {
     tree.add(2);
     tree.add(8);
     tree.add(22);
-    expect(tree.inorder()).toEqual([2, 3, 5, 8, 15, 22]);
+    expect(tree.inOrder(tree.root)).toEqual([2, 3, 5, 8, 15, 22]);
   });
 
   it('can return a collection from a postorder traversal', () => {
-    const tree = BinaryTree(10);
+    const tree = new BinaryTree(10);
     tree.add(7);
     tree.add(8);
     tree.add(9);
@@ -52,6 +52,6 @@ describe('tree tests', () => {
     tree.add(15);
     tree.add(13);
     tree.add(20);
-    expect(tree.postorder()).toEqual([2, 5, 4, 9, 8, 7, 13, 20, 15, 10]);
+    expect(tree.postOrder(tree.root)).toEqual([2, 5, 4, 9, 8, 7, 13, 20, 15, 10]);
   });
 });
