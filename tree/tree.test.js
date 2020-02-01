@@ -12,7 +12,7 @@ describe('tree tests', () => {
     expect(tree.root.value).toEqual(1);
   });
 
-  it.only('can add a left and right child to a single root node', () => {
+  it('can add a left and right child to a single root node', () => {
     const tree = new BinaryTree(2);
     tree.add(1);
     tree.add(3);
@@ -22,13 +22,13 @@ describe('tree tests', () => {
   });
 
   it('can return a collection from a preorder traversal', () => {
-    const tree = new BinaryTree(1);
+    const tree = new BinaryTree(7);
     tree.add(2);
     tree.add(1);
     tree.add(100);
     tree.add(55);
     tree.add(103);
-    expect(tree.preorder()).toEqual([2, 1, 100, 55, 103]);
+    expect(tree.preorder()).toEqual([7, 2, 1, 100, 55, 103]);
   });
 
   it('can return a collection from an inorder traversal', () => {
