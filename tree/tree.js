@@ -66,6 +66,11 @@ class BinaryTree {
     this.result.push(node.value);
     return this.result;
   }
+
+  contains(value) {
+    const contents = this.inOrder(this.root);
+    return contents.includes(value);
+  }
 }
 
 //   add(num) {

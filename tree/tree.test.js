@@ -54,4 +54,28 @@ describe('tree tests', () => {
     tree.add(20);
     expect(tree.postOrder(tree.root)).toEqual([2, 5, 4, 9, 8, 7, 13, 20, 15, 10]);
   });
+
+  it('can contrust a tree from an array', () => {
+    const tree = new BinaryTree([10, 7, 8, 9, 4, 2, 5, 15, 13, 20]);
+    console.log(tree.left);
+    expect(tree).toBeDefined();
+    expect(tree.root.value).toEqual(10);
+    expect(tree.root.left.value).toEqual(7);
+    expect(tree.root.left.left.value).toEqual(4);
+    expect(tree.root.left.left.left.value).toEqual(2);
+    expect(tree.root.left.left.right.value).toEqual(5);
+    expect(tree.root.left.right.value).toEqual(8);
+    expect(tree.root.left.right.right.value).toEqual(9);
+    expect(tree.root.right.value).toEqual(15);
+    expect(tree.root.right.left.value).toEqual(13);
+    expect(tree.root.right.right.value).toEqual(20);
+  });
+
+  it('can return the correct boolean if a tree contains a value', () => {
+    const tree = new BinaryTree([10, 7, 8, 9, 4, 2, 5, 15, 13, 20]);
+    expect(tree.contains(10)).toBeTruthy();
+    expect(tree.contains(2)).toBeTruthy();
+    expect(tree.contains(20)).toBeTruthy();
+    expect(tree.contains(999)).toBeFalsy();
+  });
 });
