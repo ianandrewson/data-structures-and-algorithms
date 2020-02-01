@@ -7,50 +7,72 @@ class Node {
 }
 
 class BinaryTree {
-  constructor(root){
-    if(typeof root === 'number'){
-      //console.log('root is a number');
-      this.root = new Node(root);
-      this.left = null;
-      this.right = null;
-      
+  constructor(vals){
+    this.result = [];
+    if(typeof vals === 'number'){
+      this.root = new Node(vals);
+    } else if(!vals) {
+      this.root = new Node();
     } else {
-      if(!root){
-        //console.log('there is no root, empty tree');
-        this.root = new Node(null);
-        this.right = null;
-        this.left = null;
+      this.root = new Node(vals.splice(0, 1)[0]);
+      vals.forEach(value => this.add(value));
+    }
+  }
+
+  add(num){
+    let current = this.root;
+    while(current !== null){
+      if(num === current.value){
+        throw new Error('number already in tree');
+      }
+      if(num < current.value){
+        if(!current.left){
+          current.left = new Node(num);
+          current = null;
+        } else {
+          current = current.left;
+        }
       } else {
-        //console.log('passed in root is a node');
-        this.root = root;
-        this.left = this.root.left;
-        this.right = this.root.right;
+        if(!current.right){
+          current.right = new Node(num);
+          current = null;
+        } else {
+          current = current.right;
+        }
       }
     }
   }
 
-  add(num) {
-    if(num === this.root.value){
-      throw Error('value already in tree');
-    }
-    if(num < this.root.value){
-      console.log('here');
-      if(this.left !== null) {
-        console.log('left is not null');
-        new BinaryTree(this.left).add(num);
-      } else {
-        this.left = new Node(num);
-        this.root.left = this.left;
-      }
-    } else {
-      if(this.right !== null){
-        new BinaryTree(this.right).add(num);
-      } else {
-        this.right = new Node(num);
-        this.root.right = this.right;
-      }
-    }
+  preOrder(node) {
+    if(node === this.root) this.result = [];
+    this.result.push(node.value);
+    if(node.left) this.preOrder(node.left);
+    if(node.right) this.preOrder(node.right);
+    return this.result;
   }
+
+  inOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.inOrder(node.left);
+    this.result.push(node.value);
+    if(node.right) this.inOrder(node.right);
+    return this.result;
+  }
+
+  postOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.postOrder(node.left);
+    if(node.right) this.postOrder(node.right);
+    this.result.push(node.value);
+    return this.result;
+  }
+
+  contains(value) {
+    const contents = this.inOrder(this.root);
+    return contents.includes(value);
+  }
+
+  
 }
 
 //   add(num) {

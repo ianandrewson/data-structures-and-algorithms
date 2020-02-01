@@ -1,4 +1,4 @@
-const { FBT, Node, Tree } = require('./fizz-buzz-tree.js');
+const { FizzBuzzTree, Node, Tree } = require('./fizz-buzz-tree.js');
 
 describe('fizzbuzz tree tests', () => {
   it('can instantiate a new node', () => {
@@ -31,7 +31,7 @@ describe('fizzbuzz tree tests', () => {
     expect(tree.root.left.left.value).toEqual(1);
   });
 
-  it.only('can make a tree out a list of node values', () => {
+  it('can make a tree out a list of node values', () => {
     const tree = new Tree([5, 3, 7, 2, 4, 9]);
     expect(tree).toBeDefined();
     expect(tree.root.value).toEqual(5);
@@ -44,32 +44,32 @@ describe('fizzbuzz tree tests', () => {
 
   it('can convert a single root node of value 3 to the word "Fizz"', () => {
     const tree = new Tree(3);
-    const newTree = FBT(tree);
+    const newTree = FizzBuzzTree(tree);
     expect(newTree.root.value).toEqual('Fizz');
   });
 
   it('can convert a single root node of value 5 to the word "Buzz"', () => {
     const tree = new Tree(5);
-    const newTree = FBT(tree);
+    const newTree = FizzBuzzTree(tree);
     expect(newTree.root.value).toEqual('Buzz');
   });
 
   it('can convert a single root node of value 15 to the word "FizzBuzz"', () => {
     const tree = new Tree(15);
-    const newTree = FBT(tree);
+    const newTree = FizzBuzzTree(tree);
     expect(newTree.root.value).toEqual('FizzBuzz');
   });
 
   it('can convert a single root node of value 2 to a string', () => {
     const tree = new Tree(2);
-    const newTree = FBT(tree);
-    expect(typeof newTree.root.value).toEqual('String');
+    const newTree = FizzBuzzTree(tree);
+    expect(typeof newTree.root.value).toEqual('string');
     expect(newTree.root.value).toEqual('2');
   });
 
   it('can convert a three node tree to the right values', () => {
     const tree = new Tree([5, 2, 9]);
-    const newTree = FBT(tree);
+    const newTree = FizzBuzzTree(tree);
     expect(newTree.root.value).toEqual('Buzz');
     expect(newTree.root.left.value).toEqual('2');
     expect(newTree.root.right.value).toEqual('Fizz');
@@ -77,13 +77,13 @@ describe('fizzbuzz tree tests', () => {
 
   it('can convert a 6 node tree to the right values', () => {
     const tree = new Tree([5, 3, 7, 15, 6, 1]);
-    const newTree = FBT(tree);
+    const newTree = FizzBuzzTree(tree);
     expect(newTree.root.value).toEqual('Buzz');
     expect(newTree.root.left.value).toEqual('Fizz');
     expect(newTree.root.left.left.value).toEqual('1');
     expect(newTree.root.right.value).toEqual('7');
     expect(newTree.root.right.right.value).toEqual('FizzBuzz');
-    expect(newTree.root.right.left.value).toEqual('7');
+    expect(newTree.root.right.left.value).toEqual('Fizz');
     expect(newTree.root.right.left.right).toBeNull();
   });
 });

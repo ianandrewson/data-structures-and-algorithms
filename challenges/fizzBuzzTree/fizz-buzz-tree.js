@@ -7,8 +7,11 @@ class Node {
 }
 class Tree {
   constructor(vals){
+    this.result = [];
     if(typeof vals === 'number'){
       this.root = new Node(vals);
+    } else if(!vals) {
+      this.root = new Node();
     } else {
       this.root = new Node(vals.splice(0, 1)[0]);
       vals.forEach(value => this.add(value));
@@ -39,30 +42,55 @@ class Tree {
     }
   }
 
-  // add(num) {
-  //   if(num === this.root.value){
-  //     throw Error('value already in tree');
-  //   }
-  //   if(num < this.root.value){
-  //     if(this.left !== null) {
-  //       new BinaryTree(this.left).add(num);
-  //     } else {
-  //       this.left = new Node(num);
-  //       this.root.left = this.left;
-  //     }
-  //   } else {
-  //     if(this.right !== null){
-  //       new BinaryTree(this.right).add(num);
-  //     } else {
-  //       this.right = new Node(num);
-  //       this.root.right = this.right;
-  //     }
-  //   }
-  // }
+  preOrder(node) {
+    if(node === this.root) this.result = [];
+    this.result.push(node.value);
+    if(node.left) this.preOrder(node.left);
+    if(node.right) this.preOrder(node.right);
+    return this.result;
+  }
+
+  inOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.inOrder(node.left);
+    this.result.push(node.value);
+    if(node.right) this.inOrder(node.right);
+    return this.result;
+  }
+
+  postOrder(node) {
+    if(node === this.root) this.result = [];
+    if(node.left) this.postOrder(node.left);
+    if(node.right) this.postOrder(node.right);
+    this.result.push(node.value);
+    return this.result;
+  }
+
+  contains(value) {
+    const contents = this.inOrder(this.root);
+    return contents.includes(value);
+  }
+
+  FizzBuzzConvert(node) {
+    if(node.value % 15 === 0) {
+      node.value = 'FizzBuzz';
+    } else if(node.value % 5 === 0) {
+      node.value = 'Buzz';
+    } else if(node.value % 3 === 0) {
+      node.value = 'Fizz';
+    } else {
+      node.value = node.value.toString();
+    }
+    if(node.left) this.FizzBuzzConvert(node.left);
+    if(node.right) this.FizzBuzzConvert(node.right);
+    return this;
+  }
 }
 
 const FizzBuzzTree = tree => {
-
+  const values = tree.preOrder(tree.root);
+  const newTree = new Tree(values);
+  return newTree.FizzBuzzConvert(newTree.root);
 };
 
 module.exports = { FizzBuzzTree, Node, Tree };
