@@ -18,3 +18,5 @@ Table of Contents:
 8. [queue-with-stacks](challenges/queueWithStacks/README.md)
 
 9. [first-in-first-out-animal-shelter](challenges/fifoAnimalShelter/README.md)
+
+10. [multi-bracket-balance](challenges/multiBracketValidation/README.md)
