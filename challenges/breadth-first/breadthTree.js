@@ -71,6 +71,19 @@ class BinaryTree {
     const contents = this.inOrder(this.root);
     return contents.includes(value);
   }
+
+  breadthFirst(node) {
+    if(node === this.root) this.result = [];
+    const queue = [];
+    queue.push(node);
+    while(queue.length > 0){
+      this.result.push(queue[0].value);
+      if(queue[0].left) queue.push(queue[0].left);
+      if(queue[0].right) queue.push(queue[0].right);
+      queue.shift();
+    }
+    return this.result;
+  }
 }
 
 module.exports = { BinaryTree, Node };
