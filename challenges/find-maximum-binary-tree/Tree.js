@@ -71,5 +71,16 @@ class BinaryTree {
     const contents = this.inOrder(this.root);
     return contents.includes(value);
   }
+
+  findMaximumValue(node) {
+    const values = this.inOrder(node);
+    let maximum = 0;
+    for(let i = 0; i < values.length; i++){
+      if(values[i] > maximum){
+        maximum = values[i];
+      }
+    }
+    return maximum;
+  }
 }
 module.exports = { BinaryTree, Node };
